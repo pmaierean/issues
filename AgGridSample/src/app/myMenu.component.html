@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <ul class="nav nav-tabs" id="myTab">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" (click)="setCurrentMenu(1)">First</a>
+      <div class="dropdown-menu" [style]="getStyle(1)">
+        <sub-menu [comps]="getLinks(1)"></sub-menu>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" (click)="setCurrentMenu(2)">Second</a>
+      <div class="dropdown-menu" [style]="getStyle(2)">
+        <sub-menu [comps]="getLinks(2)"></sub-menu>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" (click)="setCurrentMenu(3)">Third</a>
+      <div class="dropdown-menu" [style]="getStyle(3)">
+        <ul>
+          <li><a name="Simple" (click)="clickOnLink('Click on the static link')">Static</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>

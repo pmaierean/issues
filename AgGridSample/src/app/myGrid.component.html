@@ -1,0 +1,21 @@
+<div id="gridContainer" [ngStyle]="gridContainerStyle">
+  <ag-grid-angular
+    #agGrid
+    style="height:100%;width:100%;"
+    id="myGrid"
+    class="ag-theme-balham"
+    [modules]="modules"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [rowData]="rowData"
+    (gridReady)="onGridReady($event)"
+    [pagination]="true"
+    [overlayNoRowsTemplate]="overlayNoRowsTemplate"
+    [headerHeight]="50"
+    [localeText]="localeText"
+    [getRowStyle]="getRowStyle"
+    [rowClassRules]="rowClassRules"
+    [enableCellChangeFlash]="false"
+    [rowHeight]="50"
+  ></ag-grid-angular>
+</div>
